@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Starter Template for Next.js 🚀
 
-## Getting Started
+This is a starter template for Next.js version 15. It includes pre-configured tools to optimize the start of a new application and features some opinionated code.
 
-First, run the development server:
+## Main Features ✨
+
+- All default options provided by Next.js.
+- Custom configurations for IDEs (VSCode or Cursor).
+- Custom configurations for ESLint and Prettier.
+- Pre-configured "not-found" page.
+- Libraries and enhanced ESLint rules for environment variable management:
+  - `@t3-oss/env-nextjs`
+  - `zod`
+  - Centralized environment variables in the `src/env/server.ts` file.
+
+## Installation 🛠️
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone this repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd <project-name>
+
+# Install dependencies using pnpm (recommended)
+pnpm install
+
+# Alternatively, you can use npm or yarn
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage 📄
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+(Here you can detail how to start using the template and any relevant instructions)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚠️ Work in Progress
 
-To learn more about Next.js, take a look at the following resources:
+Environment variable detection during the build process using the `jiti` library is currently a work in progress. The developer has not yet found a solution compatible with Next.js 15. Stay tuned for future updates to address this issue.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Note:** Feel free to customize the included configurations to better fit your project. We hope this starter template saves you time and helps you build amazing applications with Next.js! 🚀
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
