@@ -1,3 +1,4 @@
+// this the right way to do access to env variables
 import { env } from '@/env/server';
 
 export default function Home() {
