@@ -11,9 +11,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  // ...compat.extends("next/core-web-vitals", "next/typescript","prettier"),
   ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript'],
+    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
     plugins: ['n'],
     rules: {
       'prefer-arrow-callback': 'error',
@@ -22,6 +21,33 @@ const eslintConfig = [
       semi: 'error',
       quotes: ['error', 'double'],
       'n/no-process-env': ['error'],
+      'no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      'padding-line-between-statements': [
+        'warn',
+        { blankLine: 'always', prev: '*', next: ['return', 'export'] },
+        { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+        {
+          blankLine: 'any',
+          prev: ['const', 'let', 'var'],
+          next: ['const', 'let', 'var'],
+        },
+      ],
+      'react/jsx-sort-props': [
+        'warn',
+        {
+          callbacksLast: true,
+          shorthandFirst: true,
+          noSortAlphabetically: false,
+          reservedFirst: true,
+        },
+      ],
     },
   }),
   eslintPluginPrettierRecommended,
