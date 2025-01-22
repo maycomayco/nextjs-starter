@@ -12,6 +12,7 @@ This is a starter template for Next.js version 15. It includes pre-configured to
   - `@t3-oss/env-nextjs`
   - `zod`
   - Centralized environment variables in the `src/env/server.ts` file.
+- **Naming Conventions**: We rely on kebab-case for naming files and directories. This is enforced using the `check-file` ESLint plugin, which includes rules for filename and folder naming conventions.
 
 ## Installation 🛠️
 
