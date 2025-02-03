@@ -12,7 +12,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
+    extends: ['next/core-web-vitals', 'next/typescript'],
     plugins: ['n', 'check-file'],
     rules: {
       'prefer-arrow-callback': 'error',
@@ -20,7 +20,7 @@ const eslintConfig = [
       'prefer-template': 'error',
       semi: 'error',
       quotes: ['error', 'double'],
-      'n/no-process-env': ['error'],
+      'n/no-process-env': ['warn'],
       'no-unused-vars': [
         'error',
         {
@@ -65,6 +65,7 @@ const eslintConfig = [
           'src/**/!(__tests__)': 'KEBAB_CASE',
         },
       ],
+      'prettier/prettier': ['warn', {}, { usePrettierrc: true }],
     },
   }),
   eslintPluginPrettierRecommended,

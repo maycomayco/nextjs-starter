@@ -1,5 +1,4 @@
-// this the right way to do access to env variables
-import { env } from '@/env/server';
+import { isDev } from '@/lib/env';
 
 export default function Home() {
   return (
@@ -8,7 +7,10 @@ export default function Home() {
         <h1 className="text-5xl font-medium">I&apos;m a starter package</h1>
         <br />
         <p>A simple starter with some goods.</p>
-        {JSON.stringify(env)}
+
+        <p>
+          <code>dev environment: {isDev ? 'yes' : 'no'}</code>
+        </p>
       </section>
     </div>
   );
